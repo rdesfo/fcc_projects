@@ -19,10 +19,10 @@ var doSearch = function(text){
     //console.log(JSON.stringify(value.title));
     //console.log(JSON.stringify(value.snippet));
 
-    result += "<div>";
-    result += "<h2>" + JSON.stringify(value.title) + "</h2>";
-    result += "<p>" + JSON.stringify(value.snippet) + "</p>";
-    result += "</div>";
+    result += '<div class="jumbotron">';
+    result += '<h2>' + JSON.stringify(value.title) + '</h2>';
+    result += '<p>' + JSON.stringify(value.snippet) + '</p>';
+    result += '</div>';
 
     // "https://en.wikipedia.org/wiki/" + encodeURI("some title")
     });
