@@ -6,7 +6,6 @@ might use
 http://caolan.github.io/async/index.html
 -->
 
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,10 +23,18 @@ http://caolan.github.io/async/index.html
   <script src="WikipediaViewer.js"></script>
 </head>
 <body>
-  <div>
-    <input type="text" name="search"  maxlength="512" id="search" class="searchField" autocomplete="off">
-    <button id="btnSearch">Search</button>
-  </div>
-  <div class="results">
+  <div class="container">
+    <div class="text-center">
+      <div class="input-group">
+        <input type="text" name="search"  maxlength="512" id="search" class="form-control" autocomplete="off" placeholder="Search Wikipedia for...">
+        <span class="input-group-btn">
+          <button id="btnSearch" class="btn btn-default">
+            Search 
+          </button>
+        </span>
+      </div>
+    </div>
+    <div class="results">
+    </div>
   </div>
 </body>
