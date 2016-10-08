@@ -1,0 +1,41 @@
+<!--
+https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer
+https://gist.github.com/wavded/2a6c433598bb8a1746cf#chaining-and-nesting-promises
+
+might use
+http://caolan.github.io/async/index.html
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desfo.org - Home</title>
+ <!-- <link rel="stylesheet" type="text/css" href="./css/default.css" /> -->
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <script src="https://use.fontawesome.com/14b3dc845a.js"></script>
+
+  <script src="WikipediaViewer.js"></script>
+   <link rel="stylesheet" type="text/css" href="WikipediaViewer.css">
+</head>
+<body>
+  <div class="container">
+    <div class="text-center">
+      <div class="input-group">
+        <input type="text" name="search"  maxlength="512" id="search" class="form-control" autocomplete="off" placeholder="Search Wikipedia for...">
+        <span class="input-group-btn">
+          <button id="btnSearch" class="btn btn-default">
+            Search 
+          </button>
+        </span>
+      </div>
+    </div>
+    <div class="results">
+    </div>
+  </div>
+</body>
