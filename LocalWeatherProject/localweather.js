@@ -11,7 +11,7 @@ $(document).ready(function(){
       console.log(jqxhr.status); // 200
 
 	result += '<p>' + JSON.stringify(data.weather[0].main) + '</p>';
-	result += '<p>' + JSON.stringify(data.main.temp) + '</p>';
+	result += '<p>' + JSON.stringify(Math.round(data.main.temp)) + 'F</p>';
                            
       $(".message").html(result);
     });
