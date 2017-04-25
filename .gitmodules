@@ -1,0 +1,3 @@
+[submodule "LocalWeatherProject/owfont"]
+	path = LocalWeatherProject/owfont
+	url = https://github.com/websygen/owfont.git
