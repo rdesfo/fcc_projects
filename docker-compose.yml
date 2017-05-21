@@ -8,7 +8,11 @@ services:
     ports:
       - "8080:80"
     secrets:
-      - openweathermapappid
+      - source: openweathermapappid
+        target: openweather_secret
+        uid: '100'
+        gid: '101'
+        mode: 0440
 
 secrets:
  openweathermapappid:
