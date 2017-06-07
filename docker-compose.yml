@@ -7,6 +7,8 @@ services:
       - .:/usr/share/nginx/html:z
     ports:
       - "8080:80"
+    security_opt:
+      - label:type:docker_t
     secrets:
       - source: openweathermapappid
         target: openweather_secret
