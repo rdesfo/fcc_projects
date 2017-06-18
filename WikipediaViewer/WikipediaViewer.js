@@ -35,8 +35,8 @@ var doSearch = function(text){
     //console.log(JSON.stringify(value.snippet));
 
     result += '<div class="jumbotron">';
-	result += '<h2><a href="https://en.wikipedia.org/wiki/' + (value.title).replace(' ', '_')+ '">'+ JSON.stringify(value.title) + '</a></h2>';
-    result += '<p>' + JSON.stringify(value.snippet) + '</p>';
+	result += '<h2><a href="https://en.wikipedia.org/wiki/' + (value.title).replace(' ', '_')+ '">'+ value.title + '</a></h2>';
+    result += '<p>' + value.snippet + '</p>';
     result += '</div>';
 
     // "https://en.wikipedia.org/wiki/" + encodeURI("some title")
