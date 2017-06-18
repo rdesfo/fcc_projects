@@ -17,16 +17,15 @@ jQuery.fn.center = function () {
     var text= document.getElementById('search').value;
     console.log(text);
 
-  $('.text-center').css("position", "static");
-  //$('.text-center').css("top", "5%");
+    $('.text-center').css("position", "static");
 
-    doSearch(text);
+    var wikiSearch = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=" + text + "&callback=?";
+
+    doSearch(text, wikiSearch);
   })
   
-var doSearch = function(text){
-  var wikiSearch = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=" + text + "&callback=?";
-
-  $.getJSON(wikiSearch,null,function(json){
+  var doSearch = function(text, url){
+    $.getJSON(url,null,function(json){
     var result = "";
 
     $.each(json.query.search, function(key, value){
