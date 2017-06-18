@@ -21,10 +21,10 @@ jQuery.fn.center = function () {
 
     var wikiSearch = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=" + text + "&callback=?";
 
-    doSearch(text, wikiSearch);
+    doSearch(wikiSearch);
   })
   
-  var doSearch = function(text, url){
+  var doSearch = function(url){
     $.getJSON(url,null,function(json){
     var result = "";
 
