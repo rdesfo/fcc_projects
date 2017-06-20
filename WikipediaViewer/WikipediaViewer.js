@@ -29,7 +29,18 @@ $(document).ready(function() {
 
     doSearch(wikiSearch);
   }
-  
+
+  $('#btnRandom').on("click", function(){
+
+    $('.text-center').css("position", "static");
+
+    //var randomSearch = "https://en.wikipedia.org/w/api.php?action=query&generator=random&format=json";
+    //var randomSearch = "https://en.wikipedia.org/w/api.php?format=jsonp&action=query&generator=random&prop=revisions&rvprop=content";
+    var randomSearch = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=random&prop=revisions&rvprop=content";
+
+    doSearch(randomSearch);
+  })  
+
   var doSearch = function(search){
     $.getJSON(search)
       .done(function(json) {
