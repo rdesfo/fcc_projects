@@ -22,6 +22,7 @@ jQuery.fn.center = function () {
     var wikiSearch = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=" + text + "&callback=?";
 
     doSearch(wikiSearch);
+    return doSearch(wikiSearch);
   })
   
   var doSearch = function(search){
