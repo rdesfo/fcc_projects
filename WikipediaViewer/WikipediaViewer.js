@@ -24,8 +24,8 @@ jQuery.fn.center = function () {
     doSearch(wikiSearch);
   })
   
-  var doSearch = function(url){
-    $.getJSON(url,null,function(json){
+  var doSearch = function(search){
+    $.getJSON(search,function(json){
     var result = "";
 
     $.each(json.query.search, function(key, value){
