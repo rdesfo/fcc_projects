@@ -25,25 +25,21 @@ jQuery.fn.center = function () {
   })
   
   var doSearch = function(search){
-    $.getJSON(search,function(json){
-    var result = "";
-
-    $.each(json.query.search, function(key, value){
-    //console.log("key: " + JSON.stringify(key) + " and value: " + JSON.stringify(value));
-    //console.log(JSON.stringify(value.title));
-    //console.log(JSON.stringify(value.snippet));
-
-    result += '<div class="jumbotron">';
-    result += '<h2><a href="https://en.wikipedia.org/wiki/' + (value.title).replace(' ', '_')+ '">'+ value.title + '</a></h2>';
-    result += '<p>' + value.snippet + '</p>';
-    result += '</div>';
-
-    // "https://en.wikipedia.org/wiki/" + encodeURI("some title")
-    });
-
-    $(".results").html(result);
-    console.log(result);
-
-  },'json');
-};
+    $.getJSON(search)
+      .done(function(json) {
+        console.log( "second success" );
+        var result = "";
+        $.each(json.query.search, function(key, value){
+          result += '<div class="jumbotron">';
+          result += '<h2><a href="https://en.wikipedia.org/wiki/' + (value.title).replace(' ', '_')+ '">'+ value.title + '</a></h2>';
+          result += '<p>' + value.snippet + '</p>';
+          result += '</div>';
+        });
+        $(".results").html(result);
+        console.log(result);
+      })
+      .fail(function() {
+        console.log( "error" );
+      })
+  };
 }); //ready
