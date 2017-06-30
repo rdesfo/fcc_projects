@@ -1,6 +1,16 @@
 $(document).ready(function(){
 
- function getIP(data) {
+  jQuery.fn.center = function () {
+    this.css("position","absolute");
+    this.css("bottom", "50%");
+    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + 
+      $(window).scrollLeft()) + "px");
+    return this;
+  }
+
+  $('.container').center();
+
+  function getIP(data) {
      var myLat = Math.round(data.lat);
      var myLon = Math.round(data.lon);
      var result = "";
