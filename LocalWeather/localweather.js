@@ -15,7 +15,7 @@ $(document).ready(function(){
      var myLon = Math.round(data.lon);
      var result = "";
            
-    $.get("http://api.openweathermap.org/data/2.5/weather?lat=" + myLat + "&lon=" + myLon + "&units=imperial&appid=e0737aaec18774db13c1434bc50f2fe5", function(data, textStatus, jqxhr) {
+    $.get("http://www.api.openweathermap.org/data/2.5/weather?lat=" + myLat + "&lon=" + myLon + "&units=imperial&appid=e0737aaec18774db13c1434bc50f2fe5", function(data, textStatus, jqxhr) {
       console.log( JSON.stringify( data )); // Data returned
       console.log(textStatus); // Success
       console.log(jqxhr.status); // 200
@@ -29,7 +29,7 @@ $(document).ready(function(){
  }
 
 
- $.getJSON( "http://ip-api.com/json/", function( data, textStatus, jqxhr ) {
+ $.getJSON( "http://www.ip-api.com/json/", function( data, textStatus, jqxhr ) {
   console.log( JSON.stringify( data )); // Data returned
   console.log( textStatus ); // Success
   console.log( jqxhr.status ); // 200
