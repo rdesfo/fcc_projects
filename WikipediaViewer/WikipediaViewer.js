@@ -10,20 +10,25 @@ $(document).ready(function() {
     return this;
   }
 
+  $('.form-inline').center();
 
-  $('.text-center').center();
-  
-  $('#btnSearch').on("click", function(){
+  $("form").submit(function(e){
+    e.preventDefault();
+    getValue();
+  });
+
+  $('#btnSearch').click(getValue);
+
+  function getValue(){
     var text= document.getElementById('search').value;
     console.log(text);
 
-    $('.text-center').css("position", "static");
+    $('.form-inline').css("position", "static");
 
     var wikiSearch = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=" + text + "&callback=?";
 
     doSearch(wikiSearch);
-    return doSearch(wikiSearch);
-  })
+  }
   
   var doSearch = function(search){
     $.getJSON(search)
