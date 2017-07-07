@@ -29,10 +29,5 @@ $(document).ready(function(){
  }
 
 
- $.getJSON( "http://www.ip-api.com/json/", function( data, textStatus, jqxhr ) {
-  console.log( JSON.stringify( data )); // Data returned
-  console.log( textStatus ); // Success
-  console.log( jqxhr.status ); // 200
- }).done( getIP );
 
  });
