@@ -10,24 +10,42 @@ $(document).ready(function(){
 
   $('.container').center();
 
-  function getIP(data) {
-     var myLat = Math.round(data.lat);
-     var myLon = Math.round(data.lon);
-     var result = "";
-           
-    $.get("http://www.api.openweathermap.org/data/2.5/weather?lat=" + myLat + "&lon=" + myLon + "&units=imperial&appid=e0737aaec18774db13c1434bc50f2fe5", function(data, textStatus, jqxhr) {
-      console.log( JSON.stringify( data )); // Data returned
+  navigator.geolocation.getCurrentPosition(myPosition);
+
+  function myPosition(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    roundLatLon(lat, lon);
+  }
+
+  function roundLatLon(lat, lon){
+    const rLat = Math.round(lat);
+    const rLon = Math.round(lon);
+    getWeather(rLat, rLon);
+  }
+
+  function getWeather(lat, lon) {
+    $.get("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=e0737aaec18774db13c1434bc50f2fe5", function(data, textStatus, jqxhr) {
+       console.log(JSON.stringify( data )); // Data returned
+       console.log(textStatus); // Success
+       console.log(jqxhr.status); // 200
+    })
+    .done(function( json ) {
+      console.log(json);
+      updateResult(json);
+    })
+    .fail(function( jqxhr, textStatus, error ) {
       console.log(textStatus); // Success
       console.log(jqxhr.status); // 200
-
-	result += '<p><i class="owf owf-5x owf-' + JSON.stringify(data.weather[0].id) + '"></i></p>';
-	result += '<p>' + JSON.stringify(data.weather[0].main) + '</p>';
-	result += '<p>' + JSON.stringify(Math.round(data.main.temp)) + 'F</p>';
-                           
-      $(".message").html(result);
+      console.log(error);
     });
- }
+  }
 
-
-
- });
+  function updateResult(data){
+    var result = "";
+    result += '<p><i class="owf owf-5x owf-' + JSON.stringify(data.weather[0].id) + '"></i></p>';
+    result += '<p>' + JSON.stringify(data.weather[0].main) + '</p>';
+    result += '<p>' + JSON.stringify(Math.round(data.main.temp)) + 'F</p>';
+    $(".message").html(result);
+  }
+});
