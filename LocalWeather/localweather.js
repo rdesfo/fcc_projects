@@ -25,7 +25,7 @@ $(document).ready(function(){
   }
 
   function getWeather(lat, lon) {
-    $.get("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=e0737aaec18774db13c1434bc50f2fe5", function(data, textStatus, jqxhr) {
+    $.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=e0737aaec18774db13c1434bc50f2fe5", function(data, textStatus, jqxhr) {
        console.log(JSON.stringify( data )); // Data returned
        console.log(textStatus); // Success
        console.log(jqxhr.status); // 200
