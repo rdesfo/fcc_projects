@@ -36,7 +36,7 @@ $(document).ready(function(){
   }
 
   function updateResult(data){
-    var loc = ""
+    var loc = "";
     var result = "";
 
     console.log(data.location.name);
