@@ -45,8 +45,10 @@ $(document).ready(function(){
     loc += '<p>' + data.location.region + '</p>'; //state
     $("#location").html(loc);
 
+    var current_temp =  data.current.temp_f + " F"
+
     result += '<p>' + data.current.condition.text + '</p>';
-    result += '<p>' + data.current.temp_f + '</p>';
+    result += '<p>' + current_temp + '</p>';
     $("#message").html(result);
 
     var wind_speed = "wind speed: " + data.current.wind_mph + " mph";
