@@ -30,7 +30,7 @@ $(document).ready(function(){
        console.log(textStatus); // Success
        console.log(jqxhr.status); // 200
     })
-    .done(function( json ) {
+    .done(function(json){
       console.log(json);
       updateResult(json);
     })
