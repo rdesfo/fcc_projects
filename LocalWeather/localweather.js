@@ -15,17 +15,11 @@ $(document).ready(function(){
   function myPosition(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    roundLatLon(lat, lon);
-  }
-
-  function roundLatLon(lat, lon){
-    const rLat = Math.round(lat);
-    const rLon = Math.round(lon);
-    getWeather(rLat, rLon);
+    getWeather(lat, lon);
   }
 
   function getWeather(lat, lon) {
-    $.get("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=e0737aaec18774db13c1434bc50f2fe5", function(data, textStatus, jqxhr) {
+    $.get("https://api.apixu.com/v1/current.json?key=05495792429f4ad7b9e13631171107&q=" + lat + " " + lon, function(data, textStatus, jqxhr) {
        console.log(JSON.stringify( data )); // Data returned
        console.log(textStatus); // Success
        console.log(jqxhr.status); // 200
