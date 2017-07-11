@@ -36,7 +36,14 @@ $(document).ready(function(){
   }
 
   function updateResult(data){
+    var loc = ""
     var result = "";
+
+    console.log(data.location.name);
+    loc += '<p>' + data.location.name + '</p>'; //town
+    loc += '<p>' + data.location.region + '</p>'; //state
+    $("#location").html(loc);
+
     result += '<p>' + data.current.condition.text + '</p>';
     result += '<p>' + data.current.temp_f + '</p>';
     $("#message").html(result);
