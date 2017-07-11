@@ -38,6 +38,7 @@ $(document).ready(function(){
   function updateResult(data){
     var loc = "";
     var result = "";
+    var more = "";
 
     console.log(data.location.name);
     loc += '<p>' + data.location.name + '</p>'; //town
@@ -47,5 +48,22 @@ $(document).ready(function(){
     result += '<p>' + data.current.condition.text + '</p>';
     result += '<p>' + data.current.temp_f + '</p>';
     $("#message").html(result);
+
+    var wind_speed = "wind speed: " + data.current.wind_mph + " mph";
+    var pressure = "barometric pressure: " + data.current.pressure_in + "in";
+    var precip = "precipitation: " + data.current.precip_in + " in";
+    var feels_like = "feels like: " + data.current.feelslike_f + "f";
+    var visibility = "visibility: " + data.current.vis_miles + " mi";
+
+    more += '<p>' + wind_speed + '</p>';
+    more += '<p>' + "wind direction: " + data.current.wind_degree + '</p>';
+    more += '<p>' + pressure + '</p>';
+    more += '<p>' + precip + '</p>';
+    more += '<p>' + "humidity: " + data.current.humidity + '</p>';
+    more += '<p>' + "clouds: " + data.current.cloud + '</p>';
+    more += '<p>' + feels_like + '</p>';
+    more += '<p>' + visibility + '</p>';
+    $("#more").html(more);
+    $("#more").attr("aria-expanded","true");
   }
 });
