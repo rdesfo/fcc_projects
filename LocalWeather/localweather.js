@@ -39,6 +39,6 @@ $(document).ready(function(){
     var result = "";
     result += '<p>' + data.current.condition.text + '</p>';
     result += '<p>' + data.current.temp_f + '</p>';
-    $(".message").html(result);
+    $("#message").html(result);
   }
 });
