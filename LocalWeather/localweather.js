@@ -56,6 +56,5 @@ $(document).ready(function(){
     more += '<p>' + feels_like + '</p>';
     more += '<p>' + visibility + '</p>';
     $("#more").html(more);
-    $("#more").attr("aria-expanded","true");
   }
 });
