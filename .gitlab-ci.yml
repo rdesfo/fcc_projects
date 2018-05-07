@@ -1,0 +1,35 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  artifacts:
+    paths:
+      - public
+  script:
+    - mkdir public
+    - cp index.* public/
+    - cp -r images public/
+    - cp -r LocalWeather public/
+    - cp -r quoteMachine public/
+    - cp -r WikipediaViewer public/
+
+test:
+  image: rdesfo/html5validator
+  stage: test
+  dependencies:
+    - build
+  script:
+    - html5validator --root $(pwd)/public
+
+pages:
+  stage: deploy
+  script:
+    - echo "deploy"
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
