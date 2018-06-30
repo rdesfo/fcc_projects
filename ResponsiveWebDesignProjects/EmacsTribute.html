@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emacs tribute</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <style>
+      body {
+          background: linear-gradient(75deg, #aa6342, #805fb7);
+      }
+      ul {
+          list-style-position: inside;
+      }
+      img {
+          height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <main id="main">
+          <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+          <h1 id="title" class="text-center">Emacs Tribute</h1>
+          <p class="text-center">A great operating system, <del>lacking only</del> that offers a decent editor (<a href="https://github.com/emacs-evil/evil">evil</a>)</p>
+          <!-- Would have been better off using figure and figcaption> -->
+          <div id="img-div">
+            <img src="https://www.gnu.org/software/emacs/images/teaser.png" alt="emacs image will go here" id="image" class="img-fluid mx-auto d-block img-fluid"></img>
+            <p id="img-caption" class="text-center">An example of the editor</p>
+          </div>
+          <!-- describing the subject of the tribute page. -->
+          <div id="tribute-info">
+            <ul>
+              <h2>Very Very Brief Releases History</h2>
+              <li><strong>Emacs 26.1 - Released May 28, 2018</strong>
+                <ul>
+                  <li>Limited form of concurrency with Lisp threads.</li>
+                  <li>Support for optional display of line numbers in the buffer.</li>
+                  <li>Emacs now uses double buffering to reduce flicker on the X Window System.</li>
+                  <li>Flymake has been completely redesigned.</li>
+                  <li>TRAMP has a new connection method for Google Drive.</li>
+                  <li>New single-line horizontal scrolling mode.</li>
+                  <li>A systemd user unit file is provided.</li>
+                  <li>Support for 24-bit colors on capable text terminals.</li>
+                </ul>
+              </li>
+              <li><strong>Emacs 25.1 - Released September 17, 2016</strong>
+                <ul>
+                  <li>Support for loading shared/dynamic libraries (modules).</li>
+                  <li>Validation of TLS/SSL certificates.</li>
+                  <li>New minor mode 'electric-quote-mode' for using curved quotes.</li>
+                  <li>Character folding support in isearch.</li>
+                  <li>el. Support for embedding native widgets inside Emacs buffers.</li>
+                  <li>New and improved facilities for inserting Unicode characters.</li>
+                </ul>
+              <li><strong>1.0 ??? - GNU Emacs, was originally written in 1984.</strong></li>
+              <li><strong>0.x?? - Emacs was originally implemented in 1976</strong>
+                <ul>
+                  <li>the MIT AI Lab's Incompatible Timesharing System (ITS), as a collection of TECO macros.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </main>
+        <footer>
+              <p class="text-center">For more information check out <a href="https://www.gnu.org/software/emacs/further-information.html">gnu's further-infomation</a> and <a href="https://en.wikipedia.org/wiki/GNU_Emacs#Release_history" id="tribute-link" target="_blank">GNU Emacs Wikipedia page</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
