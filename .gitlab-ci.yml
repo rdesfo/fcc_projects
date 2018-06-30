@@ -15,7 +15,7 @@ build:
     - cp -r LocalWeather public/
     - cp -r quoteMachine public/
     - cp -r WikipediaViewer public/
-    - cp -r ResponsiveWebDesignProject public/
+    - cp -r ResponsiveWebDesignProjects public/
 
 test:
   image: rdesfo/html5validator
