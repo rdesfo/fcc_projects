@@ -30,5 +30,56 @@
         </div>
       </nav>
     </header>
+    <main>
+      <div id="vidcontainer">
+        <div class="col col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/QV6XVyXjBO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
+          </div>
+        </div>
+      </div>
+      <div id="features">
+        <h3>Live reloading</h3>
+        <div class="row">
+          <div class="col col-md-3 text-center" style="font-size: 2rem">
+            <i class="fas fa-bolt fa-x10"></i><br>
+            <p>It's fast.  Impatient mode updates the browser as you type.</p>
+          </div>
+          <div class="col col-md-3 text-center" style="font-size: 2rem">
+            <i class="far fa-clock fa-x10"></i>
+            <p>Saves time. Instead of switch windows and refreshing browers, allows you to focus on coding.</p>
+          </div>
+          <div class="col col-md-3 text-center" style="font-size: 2rem">
+            <i class="fas fa-bug fa-x10"></i>
+            <p>Catch mistakes faster.  See errors as you type.</p>
+          </div>
+        </div>
+      </div>
+      <div id="install">
+        <h3>Install</h3>
+        <div style="margin:1.5em">
+          <p>Easy to install. Simply add the following to your init file.</p><br>
+          <div>
+            <script src="https://gitlab.com/rdes/fcc_projects/snippets/1787033.js"></script>
+          </div>
+        </div>
+      </div>
+      <div id="run">
+        <h3>Run</h3>
+        <p>It only takes 3 simple steps to start using.</p>
+        <ol type="1">
+          <li>First, make sure httpd is running. This is done by running <strong>httpd-start</strong> (M-x).</li>
+          <li>Next, add file to impatient-mode, by running <strong>impatient-mode</strong></li>
+          <li>Finally, open <strong>localhost:8080/imp</strong> in your favorite browser </li>
+        </ol>
+      </div>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter Email" target="_blank" name="email">
+          <input type="submit" class="btn btn-primary" id="submit" value="submit">
+        </div>
+      </form>
+    </main>
   </body>
 </html>
